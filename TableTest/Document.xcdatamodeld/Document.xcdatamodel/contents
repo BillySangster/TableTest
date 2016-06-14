@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
+    <entity name="Department" syncable="YES">
+        <attribute name="departmentName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="deptEmployees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employee" inverseName="employeeDept" inverseEntity="Employee" syncable="YES"/>
+    </entity>
+    <entity name="Employee" syncable="YES">
+        <attribute name="employeeName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="employeeDept" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="deptEmployees" inverseEntity="Department" syncable="YES"/>
+        <relationship name="employeeTasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="employeeForTask" inverseEntity="Task" syncable="YES"/>
+    </entity>
+    <entity name="Task" syncable="YES">
+        <attribute name="taskName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="employeeForTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="employeeTasks" inverseEntity="Employee" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Employee" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Department" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Task" positionX="-36" positionY="9" width="128" height="75"/>
+    </elements>
+</model>
