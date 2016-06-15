@@ -740,12 +740,12 @@
                                                             <subviews>
                                                                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ncA-88-CBA">
                                                                     <rect key="frame" x="0.0" y="-5" width="150" height="26"/>
-                                                                    <popUpButtonCell key="cell" type="push" title="Deptartment" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="o5E-Q4-RE8" id="Ujo-JD-iEC">
+                                                                    <popUpButtonCell key="cell" type="push" title="Department" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="o5E-Q4-RE8" id="Ujo-JD-iEC">
                                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                         <font key="font" metaFont="menu"/>
                                                                         <menu key="menu" id="mQn-gu-SII">
                                                                             <items>
-                                                                                <menuItem title="Deptartment" state="on" id="o5E-Q4-RE8"/>
+                                                                                <menuItem title="Department" state="on" id="o5E-Q4-RE8"/>
                                                                                 <menuItem title="Item 2" id="rO2-IR-k7R"/>
                                                                                 <menuItem title="Item 3" id="pJn-ju-gcw"/>
                                                                             </items>
@@ -794,6 +794,8 @@
                                             </tableColumns>
                                             <connections>
                                                 <binding destination="UX3-TN-buM" name="content" keyPath="arrangedObjects" id="FSI-3I-t6w"/>
+                                                <outlet property="dataSource" destination="5gI-5U-AMq" id="btr-oq-8h5"/>
+                                                <outlet property="delegate" destination="5gI-5U-AMq" id="k8E-Bq-7Xx"/>
                                             </connections>
                                         </tableView>
                                     </subviews>
